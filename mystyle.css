@@ -65,7 +65,7 @@ input {
     background-color: black;
     width: 100vw;
     height: 0vh;
-    z-index: 1;
+    z-index: 1000;
 }
 
 .close{

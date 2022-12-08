@@ -16,9 +16,9 @@
 
 <body style="background-color: rgb(245, 244, 243);">
 
-    <!-- <div class="fg open"></div> -->
+    <div class="fg open"></div>
 
-    <nav class="d-flex justify-content-start navbar navbar-expand-sm  sticky-top border-top border-bottom border-dark p-0" style="background-color: rgb(245, 244, 243);">
+    <nav class="d-flex justify-content-start navbar navbar-expand-sm  sticky-top border-top border-bottom border-dark p-0" style="background-color: rgb(245, 244, 243); z-index: 1;">
         <div class="container-fluid ps-0">
             <button class="navbar-toggler border-0 fs-1" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapsibleNavbar">
@@ -37,9 +37,9 @@
                             data-bs-target="#collapsibleContectbar">Contact</a>
                     </li>
                     <div class="collapse fs-4 ps-3 text-dark" id="collapsibleContectbar" style="line-height: 3.5rem;">
-                        <i class="fa-solid fa-envelope"></i> &nbsp;
-                        <i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;
-                        <i class="fa-brands fa-github"></i>
+                        <a class="fa-solid fa-envelope" href="mailto:yang8006yang@gamil.com" rel="noopener noreferrer" aria-label="Email"></a> &nbsp;
+                        <a class="fa-brands fa-linkedin" href="" aria-label="linkedin"></a>&nbsp;&nbsp;
+                        <a class="fa-brands fa-github" href="https://github.com/yang8006yang" aria-label="Github"></a>
                     </div>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
         </div>
     </nav>
 
-    <div class="d-flex align-items-center flex-wrap mb-sm-2 p-5 pt-4 pt-sm-5">
+    <div class="d-flex align-items-center justify-content-center flex-wrap mb-sm-2 p-5 pt-4 pb-0">
         <img src="./img/FB576AD7-13D7-402D-AB8E-FDB58F230602.png" alt="JingHan" width="100%"
             class=" mt-sm-3  img-fluid  col-12 col-sm-5">
         <div class="pt-sm-5 ps-sm-3 col-sm-7 ">
@@ -58,8 +58,9 @@
                 A web developer and interior designer. Like to explore the possibilities of life , and challenge
                 myself to do better.
                 <br>
-                <br>
-                <a href="#intro" data-bs-toggle="collapse" style="position: relative;left: 49vw;" id="more">...more</a>
+            </div>
+            <div class="col-12">
+                <a href="#intro" data-bs-toggle="collapse" id="more">...more</a>
                 <div class="collapse text-secondary fs-6" id="intro">
                     <div>-🌏Currently base in Taoyuan.Originally from Taiwan.</div>
                     <div>-💻Taking a Web class in WAD training center.</div>
@@ -70,30 +71,40 @@
                 </div>
             </div>
         </div>
+        <div class="col-12 text-center fs-1 text-secondary godown">
+            <a class="fa-solid fa-chevron-down" href="#project"></a>
+        </div>
     </div>
 
-    <figure class="marquee marquee--mantis mb-5" data-text="HI, HELLO ☺ "></figure>
+    <figure class="marquee marquee--mantis mb-5" data-text="HI, HELLO !(۶•̀ᴗ•́)۶"></figure>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="project">
         <ul class="nav nav-tabs nav-justified pt-sm-5" style="border-bottom: 1px solid black;">
             <li class="nav-item">
-                <a class="nav-link fs-4" href="./web.html" target="mymain" onclick="switchCategory(3)"
+                <a class="nav-link fs-4" href="./project/web.html" target="mymain" onclick="switchCategory(3)"
                     id="active">Web</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fs-4" href="./other.html" target="mymain" onclick="switchCategory(4)">Interior</a>
+                <a class="nav-link fs-4" href="./project/interior.html" target="mymain" onclick="switchCategory(4)">Interior</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fs-4" href="#" onclick="switchCategory(5)">Graphic</a>
+                <a class="nav-link fs-4" href="./project/graphic.html" target="mymain" onclick="switchCategory(5)">Graphic</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fs-4" href="./other.html" target="mymain" onclick="switchCategory(6)">Other</a>
+                <a class="nav-link fs-4" href="./project/other.html" target="mymain" onclick="switchCategory(6)">Other</a>
             </li>
         </ul>
-        <iframe src="./web.html" frameborder="0" name="mymain" width="100%" height="2000px"></iframe>
+        <iframe src="./project/web.html" frameborder="0" name="mymain" width="100%" scrolling="no" onload="resizeIframe(this)"></iframe>
     </div>
+    <footer class="text-bg-dark mt-5 p-4 d-flex">
+        <div class="col-6">
+            Bye  Then (ஐ╹◡╹)ノ
+        </div>
+        <div class="col-6 text-end">
+            ©2022 Jing-Han,Yang
+        </div>
+    </footer>
     <script src="./main.js"></script>
-    </div>
 
 </body>
 

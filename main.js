@@ -1,11 +1,12 @@
-function switchCategory($key) {
+function switchCategory(mykey) {
     let text = document.getElementsByClassName('nav-link');
-    text[3].id = ''
-    text[4].id = ''
-    text[5].id = ''
-    text[6].id = ''
-    text[$key].id = 'active'
-    console.log(text[3].id);
+    Array.from(text).forEach((value,key) => {
+        if(key==mykey){
+            text[mykey].id = 'active'
+        }else{
+            text[key].id = ''
+        }
+    })
 }
 
 // window.addEventListener("load", (event) => {
@@ -20,3 +21,9 @@ more.addEventListener("click", function() {
         more.textContent='...more'
     }
   });
+
+
+// 抓iframe 長度
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
