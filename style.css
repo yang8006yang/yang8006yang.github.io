@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
-*{
-    font-family: 'Secular One', sans-serif;
+* {
+  font-family: 'Secular One', sans-serif;
 }
 
 #active {
@@ -9,3 +9,166 @@
   border-bottom: 1px solid rgb(245, 244, 243);
 }
 
+a {
+  text-decoration: none;
+}
+
+.name {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5rem;
+}
+.logo{
+  border-right: 1px solid black;
+}
+
+@media only screen and (max-width: 576px) {
+  .name {
+    font-size: 2.5rem;
+  }
+  .logo{
+    border: 0px;
+  }
+}
+
+.nav-tabs a{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* marquee */
+.marquee {
+  overflow: hidden;
+  display: block;
+}
+
+.marquee::before {
+  display: block;
+  white-space: pre;
+  /* Abusing `content` property and `attr` function to duplicate content in CSS */
+  content: attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text) "   " attr(data-text);
+  width: fit-content;
+  transform: translate3d(-2%, 0, 0);
+  will-change: transform;
+}
+
+/**
+ * Only run animations when reduced motion is not set
+ * Thanks @patrick_h_lauke@mastodon.social for the heads up!
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .marquee::before {
+    animation: marquee 6s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    /**
+     * -2% is used to start scrolling with an offset (visual only)
+     */
+    transform: translate3d(-2%, 0, 0);
+  }
+
+  100% {
+    /**
+     * -2% offset has to be preserved
+     *
+     * Content is duplicated 20 times
+     * 100% / 20 = 5 % = "1 content length"
+     * 
+     * -1px seems to prevent a small jump between each loop
+     */
+    transform: translate3d(calc(-2% - 5% - 1px), 0, 0);
+  }
+}
+
+.marquee {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: clamp(5rem, 5vh, 5rem);
+  flex: 1;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 1000;
+}
+
+.marquee--mantis {
+  background: rgb(245, 244, 243);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* 進場動畫 */
+@keyframes close {
+  0% {
+    height: 0vh;
+  }
+
+  100% {
+    height: 100vh;
+  }
+}
+
+.fg {
+  position: absolute;
+  top: 0;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.open {
+  animation-name: close;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+}
+
+
+/* 項目照片放大縮小 */
+a img {
+  transform: scale(1);
+  transition: 1s;
+}
+
+a img:hover {
+  transform: scale(1.05);
+  transition: 1s;
+  overflow: hidden;
+}
+
+/* 項目說明文字 */
+.boxContent {
+  overflow: auto;
+  height: 10vh;
+}
+
+b {
+
+  font-size: 2rem;
+}
+
+table {
+  font-size: 1.3rem;
+}
+
+table tr td:nth-last-child(1) {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+  table {
+    transform: scale(0.8);
+    position: relative;
+    right: 10%;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  table {
+    transform: scale(0.7);
+
+  }
+}

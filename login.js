@@ -4,7 +4,9 @@ function chk() {
     let myacc="JingHan Yang";
     let mypw="HappyLife";
     if(acc == myacc && pw == mypw){
-        window.location.href = "./main.html"
+        window.setTimeout("window.location.href = './main.html'",2000);
+        const fg = document.querySelector('.fg');
+        fg.classList='fg close'
     }else{
         window.location.href = "./index.html"
         alert ("帳號或密碼錯誤，請聯絡管理員。")

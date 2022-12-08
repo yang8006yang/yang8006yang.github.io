@@ -7,3 +7,16 @@ function switchCategory($key) {
     text[$key].id = 'active'
     console.log(text[3].id);
 }
+
+// window.addEventListener("load", (event) => {
+//     console.log("page is fully loaded");
+//   });
+
+let more = document.getElementById('more');
+more.addEventListener("click", function() {
+    if(more.textContent=='...more'){
+        more.textContent='...close'
+    }else{
+        more.textContent='...more'
+    }
+  });
