@@ -1,14 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
 * {
-  font-family: 'Secular One', sans-serif;
+  font-family: 'Secular One', sans-serif , 微軟正黑體;
 }
+
 /* PORTFOLIO SECTION*/
+.title {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 576px) {
+  .title {
+    font-size: 8rem;
+    margin-top: 2rem;
+    padding-bottom: 0rem;
+  }
+}
+
+
+.subtitle {
+  margin-top: -2rem;
+  padding-bottom: 2rem;
+}
+
 #active {
   border: 1px solid black;
   border-bottom: 1px solid rgb(245, 244, 243);
   color: rgb(255, 187, 0);
 }
+
 /* 按鍵效果 */
 a {
   text-decoration: none;
@@ -16,30 +36,33 @@ a {
   transition: 0.1s border-color linear !important;
 }
 
-a:hover{
+a:hover {
   color: rgb(255, 187, 0) !important;
-  border-color: rgb(61, 61, 255)!important;
+  border-color: rgb(61, 61, 255) !important;
 }
+
 /* NAV */
 .name {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 5rem;
+  font-size: 8rem;
 }
-.logo{
+
+.logo {
   border-right: 1px solid black;
 }
 
 @media only screen and (max-width: 576px) {
   .name {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
-  .logo{
+
+  .logo {
     border: 0px;
   }
 }
 
 .nav-tabs a,
-b{
+b {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -91,13 +114,13 @@ b{
 }
 
 .marquee {
-  margin: 0 ;
+  margin: 0;
   display: flex;
   align-items: center;
   font-size: clamp(5rem, 5vh, 5rem);
-  flex : 1;
+  flex: 1;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-weight : 1000;
+  font-weight: 1000;
 }
 
 .marquee--mantis {
@@ -105,6 +128,7 @@ b{
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
+
 /* 進場動畫 */
 @keyframes close {
   0% {
@@ -123,7 +147,7 @@ b{
   width: 100vw;
   height: 100vh;
   z-index: 10;
-  
+
 }
 
 .open {
@@ -136,7 +160,7 @@ b{
 
 
 /* GO DOWN */
-.godown{
+.godown {
 
   position: relative;
   animation-name: godown;
@@ -149,12 +173,13 @@ b{
     top: -15px;
     opacity: 0;
   }
-  
+
   50% {
     top: 10px;
     opacity: 1;
   }
-  100%{
+
+  100% {
     top: -15px;
     opacity: 0;
   }
@@ -162,41 +187,50 @@ b{
 
 
 /* 項目照片放大縮小 */
-a img {
+a img,
+.intPic {
   transform: scale(1);
   transition: 1s;
 }
 
-a img:hover {
+a img:hover,
+.intPic:hover {
   transform: scale(1.05);
   transition: 1s;
   overflow: hidden;
 }
 
 /* 項目說明文字 */
-.mycard:hover{
+.mycard:hover,
+.intPic:hover {
   background-color: rgb(224, 224, 224);
   border-radius: 20px;
 }
+
 .boxContent {
   border-spacing: 0;
   border-collapse: separate;
-  font-size:0.8rem;
+  font-size: 0.8rem;
 }
-tr ,td{
+
+tr,
+td {
   border: 1px solid black;
 }
-tr:first-child td:first-child{
+
+tr:first-child td:first-child {
   border-top-left-radius: 10px;
 }
-tr:last-child td:first-child{
+
+tr:last-child td:first-child {
   border-bottom-left-radius: 10px;
 }
 
-tr:first-child  td:last-child{
+tr:first-child td:last-child {
   border-top-right-radius: 10px;
 }
-tr:last-child  td:last-child{
+
+tr:last-child td:last-child {
   border-bottom-right-radius: 10px;
 }
 
@@ -220,6 +254,6 @@ b {
   }
 }
 
-hr{
+hr {
   border: 1px solid black;
 }
