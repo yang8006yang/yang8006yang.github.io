@@ -3,16 +3,24 @@
 * {
   font-family: 'Secular One', sans-serif;
 }
-
+/* PORTFOLIO SECTION*/
 #active {
   border: 1px solid black;
   border-bottom: 1px solid rgb(245, 244, 243);
+  color: rgb(255, 187, 0);
 }
-
+/* 按鍵效果 */
 a {
   text-decoration: none;
+  transition: 0.2s color linear !important;
+  transition: 0.1s border-color linear !important;
 }
 
+a:hover{
+  color: rgb(255, 187, 0) !important;
+  border-color: rgb(61, 61, 255)!important;
+}
+/* NAV */
 .name {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 5rem;
@@ -83,13 +91,13 @@ b{
 }
 
 .marquee {
-  margin: 0;
+  margin: 0 ;
   display: flex;
   align-items: center;
   font-size: clamp(5rem, 5vh, 5rem);
-  flex: 1;
+  flex : 1;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-weight: 1000;
+  font-weight : 1000;
 }
 
 .marquee--mantis {
@@ -97,7 +105,6 @@ b{
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
-
 /* 進場動畫 */
 @keyframes close {
   0% {
@@ -127,24 +134,29 @@ b{
   animation-direction: reverse;
 }
 
+
+/* GO DOWN */
 .godown{
-  opacity: 0.5;
+
   position: relative;
   animation-name: godown;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
 @keyframes godown {
   0% {
-    top: -10px;
+    top: -15px;
+    opacity: 0;
   }
   
   50% {
     top: 10px;
+    opacity: 1;
   }
   100%{
-    top: -10px;
+    top: -15px;
+    opacity: 0;
   }
 }
 
@@ -162,22 +174,34 @@ a img:hover {
 }
 
 /* 項目說明文字 */
+.mycard:hover{
+  background-color: rgb(224, 224, 224);
+  border-radius: 20px;
+}
 .boxContent {
-  overflow: auto;
+  border-spacing: 0;
+  border-collapse: separate;
+  font-size:0.8rem;
+}
+tr ,td{
+  border: 1px solid black;
+}
+tr:first-child td:first-child{
+  border-top-left-radius: 10px;
+}
+tr:last-child td:first-child{
+  border-bottom-left-radius: 10px;
+}
+
+tr:first-child  td:last-child{
+  border-top-right-radius: 10px;
+}
+tr:last-child  td:last-child{
+  border-bottom-right-radius: 10px;
 }
 
 b {
-
   font-size: 2rem;
-}
-
-table {
-  font-size: 1.3rem;
-  
-}
-
-table tr td:nth-last-child(1) {
-  font-size: 1rem;
 }
 
 @media only screen and (max-width: 576px) {

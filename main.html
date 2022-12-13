@@ -15,26 +15,27 @@
 </head>
 
 <body style="background-color: rgb(245, 244, 243);">
+<!-- =====transition===== -->
+<div class="fg open"></div>
 
-    <div class="fg open"></div>
-
-    <nav class="d-flex justify-content-start navbar navbar-expand-sm  sticky-top border-top border-bottom border-dark p-0" style="background-color: rgb(245, 244, 243); z-index: 1;">
-        <div class="container-fluid ps-0">
-            <button class="navbar-toggler border-0 fs-1" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavbar">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ps-3 pe-3">
-                    <li class="nav-item logo">
-                        <a class="nav-link text-dark name fs-4 pe-3 " href="#">Jing-Han Yang</a>
+<!-- =====top nav===== -->
+<nav class="d-flex justify-content-start navbar navbar-expand-sm  sticky-top border-top border-bottom border-dark p-0" style="background-color: rgb(245, 244, 243); z-index: 1;">
+    <div class="container-fluid ps-0">
+        <button class="navbar-toggler border-0 fs-1" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavbar">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ps-3 pe-3">
+            <li class="nav-item logo" style="padding-right: 20vw;">
+                <a class="nav-link text-dark name fs-4 pe-3 " href="#">Jing-Han Yang</a>
                     </li>
                     <li class="nav-item" style="line-height: 2.5rem;">
                         <a class="nav-link" href="#">Resume</a>
                     </li>
                     <li class="nav-item" style="line-height: 2.5rem;">
                         <a class="nav-link" href="" data-bs-toggle="collapse"
-                            data-bs-target="#collapsibleContectbar">Contact</a>
+                        data-bs-target="#collapsibleContectbar">Contact</a>
                     </li>
                     <div class="collapse fs-4 ps-3 text-dark" id="collapsibleContectbar" style="line-height: 3.5rem;">
                         <a class="fa-solid fa-envelope" href="mailto:yang8006yang@gamil.com" rel="noopener noreferrer" aria-label="Email"></a> &nbsp;
@@ -46,16 +47,15 @@
             <a href="./index.html" class="fa-solid fa-xmark fs-1"></a>
         </div>
     </nav>
-
+    
+    <!-- =====HELLO SECTION===== -->
     <div class="d-flex align-items-center justify-content-center flex-wrap mb-sm-2 p-5 pt-4 pb-0">
-        <img src="./img/FB576AD7-13D7-402D-AB8E-FDB58F230602.png" alt="JingHan" width="100%"
-            class=" mt-sm-3  img-fluid  col-12 col-sm-5">
         <div class="pt-sm-5 ps-sm-3 col-sm-7 ">
             <div class="name">
                 JING-HAN ,YANG
             </div>
             <div class="fs-5 ">
-                A web developer and interior designer. Like to explore the possibilities of life , and challenge
+                A web developer and interior designer. <br>Like to explore the possibilities of life , and challenge
                 myself to do better.
                 <br>
             </div>
@@ -68,21 +68,23 @@
                     <div>-🍵When not working, you can find me listening to podcasts , reading novel and
                         whatching
                         drama.</div>
+                    </div>
                 </div>
             </div>
+            <img src="./img/FB576AD7-13D7-402D-AB8E-FDB58F230602.png" alt="JingHan" width="100%" class=" mt-sm-3  img-fluid  col-12 col-sm-5">
+            <div class="col-12 text-center fs-1 text-secondary godown">
+                <a class="fa-solid fa-chevron-down" href="#project"></a>
+            </div>
         </div>
-        <div class="col-12 text-center fs-1 text-secondary godown">
-            <a class="fa-solid fa-chevron-down" href="#project"></a>
-        </div>
-    </div>
+        
+        <figure class="marquee marquee--mantis mb-5" data-text="HI, HELLO !(۶•̀ᴗ•́)۶"></figure>
 
-    <figure class="marquee marquee--mantis mb-5" data-text="HI, HELLO !(۶•̀ᴗ•́)۶"></figure>
-
-    <div class="container-fluid" id="project">
-        <ul class="nav nav-tabs nav-justified pt-sm-5" style="border-bottom: 1px solid black;">
+        <!-- =====PORTFOLIO SECTION===== -->
+        <div class="container" id="project">
+            <ul class="nav nav-tabs nav-justified pt-sm-5" style="border-bottom: 1px solid black;">
             <li class="nav-item">
                 <a class="nav-link fs-4" href="./project/web.html" target="mymain" onclick="switchCategory(3)"
-                    id="active">Web</a>
+                id="active">Web</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link fs-4" href="./project/interior.html" target="mymain" onclick="switchCategory(4)">Interior</a>
@@ -96,14 +98,19 @@
         </ul>
         <iframe src="./project/web.html" frameborder="0" name="mymain" width="100%" scrolling="no" onload="resizeIframe(this)"></iframe>
     </div>
-    <footer class="text-bg-dark mt-5 p-4 d-flex">
+
+    <!-- ===== FOOTER===== -->
+    <footer class="text-bg-dark mt-5 p-4 d-flex fs-sm-6 fs-6">
         <div class="col-6">
-            Bye  Then (ஐ╹◡╹)ノ
+            This's end of the world. Bye  pal (ஐ╹◡╹)ノ
         </div>
         <div class="col-6 text-end">
             ©2022 Jing-Han,Yang
         </div>
     </footer>
+    
+    
+    <!-- ===== JS ===== -->
     <script src="./main.js"></script>
 
 </body>

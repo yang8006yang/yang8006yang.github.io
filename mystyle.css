@@ -32,6 +32,13 @@ input {
     color: red;
 }
 
+/* 按鍵hover效果 */
+div a{
+    text-decoration: none;
+}
+
+
+
 @media only screen and (min-width: 576px) {
     .login {
         width: 60%;
@@ -48,6 +55,7 @@ input {
         width: 35%;
     }
 }
+
 /* 轉場動畫 */
 @keyframes close {
     0% {
@@ -68,7 +76,7 @@ input {
     z-index: 1000;
 }
 
-.close{
+.close {
     animation-name: close;
     animation-duration: 2s;
     animation-delay: 0.5s;
