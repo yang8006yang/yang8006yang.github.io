@@ -12,3 +12,9 @@ function chk() {
         alert ("帳號或密碼錯誤，請聯絡管理員。")
     }
 }
+// 登陸綁Enter
+document.addEventListener('keydown',function(e){
+    if(e.code=='Enter'){
+        chk();
+    }
+  }, false);

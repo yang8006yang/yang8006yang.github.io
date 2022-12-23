@@ -23,6 +23,7 @@
   transition: 0.3s;
   transition-timing-function: ease-out;
   animation: circleRo 16s linear 0s infinite;;
+  z-index: -1;
 }
 
 
@@ -178,7 +179,7 @@ b {
 }
 
 .marquee--mantis {
-  background: rgb(245, 244, 243);
+  /* background: rgb(245, 244, 243); */
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
