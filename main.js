@@ -1,3 +1,4 @@
+
 function switchCategory(mykey) {
     let text = document.getElementsByClassName('nav-link');
     Array.from(text).forEach((value,key) => {
@@ -27,3 +28,8 @@ more.addEventListener("click", function() {
   function resizeIframe(obj) {
     obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
   }
+
+//   MOUSE位置
+$(window).mousemove(function (e) {
+    $("#mouse").css({ top: e.pageY, left: e.pageX }); 
+  }); 

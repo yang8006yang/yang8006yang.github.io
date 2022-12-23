@@ -5,9 +5,14 @@
   box-sizing: border-box;
 }
 
+
 .external {
   overflow: hidden;
-  height: 100vh;
+  height: 550px;
+  margin-left: -2rem;
+  margin-top: 2rem;
+  box-shadow: 0;
+
 }
 
 .scroll {
@@ -18,20 +23,20 @@
   transform: rotate(-90deg) translate3d(0,-100vh,0);
   transform-origin: top right;
   margin: 2rem;
-
+  
 }
 
 .pesudo {
-  width: 1000px;
+  width: 480px;
   height: 3000px;
 }
 
 .content {
   position: absolute;
-  top: 0px;
-  left: 95vh;
+  top: 0vh;
+  left: 100vh;
   width: 3000px;
-  height: 1000px;
+  height: 480px;
   transform-origin: 0% 0%;
   transform: rotate(90deg);
   padding: 1rem;
@@ -52,8 +57,8 @@
 /* ======================================= */
 .sign{
   position: fixed;
-  margin-top: 1rem;
-  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 2rem;
 }
 
 .imgblock {
@@ -61,12 +66,12 @@
   width: 10%;
   height: 10%;
   margin-left: 4rem;
-  margin-top: 1rem;
+  margin-top: 0.2rem;
   transition: 1s;
 }
 
 .imgblock:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 1s;
   margin: 0rem 8rem;
 }
@@ -92,3 +97,13 @@
   top: -20px;
   left: 250px;
 }
+
+.end{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rem;
+  font-weight: 900;
+  font-size: 24px;
+}
+
