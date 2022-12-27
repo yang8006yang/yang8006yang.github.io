@@ -14,6 +14,11 @@ function switchCategory(mykey) {
 //     console.log("page is fully loaded");
 //   });
 
+
+$('#contact').click(function(){
+  $( "#contactbar" ).slideToggle("slow");
+})
+// INTRO 開關
 // let more = document.getElementById('more');
 // more.addEventListener("click", function() {
 //     if(more.textContent=='...more'){
@@ -24,7 +29,6 @@ function switchCategory(mykey) {
 //       }
 //     });
     $('#more').click(function(){
-      $('#more').show;
       $( "#intro" ).slideToggle("slow");
       let text=(this.text=='...more')?'...close' : '...more';
       $(this).text(text);

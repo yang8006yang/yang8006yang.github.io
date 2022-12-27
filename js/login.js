@@ -14,7 +14,8 @@ function chk() {
 }
 // 登陸綁Enter
 document.addEventListener('keydown',function(e){
-    if(e.code=='Enter'){
+    console.log(e.code);
+    if(e.code=='Enter'||e.code=='NumpadEnter'){
         chk();
     }
   }, false);
