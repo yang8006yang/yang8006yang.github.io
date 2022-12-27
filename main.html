@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body style="background-color: rgb(245, 244, 243);">
@@ -52,7 +52,7 @@
                     </div>
                 </ul>
             </div>
-            <a href="./index.html" class="fa-solid fa-xmark fs-1"></a>
+            <a href="./index.html" class="fa-solid fa-xmark fs-1" style="text-decoration: none;"></a>
         </div>
     </nav>
 
@@ -68,8 +68,8 @@
                 myself to do better.
             </div>
             <div class="col-12">
-                <a href="#intro" data-bs-toggle="collapse" id="more" >...more</a>
-                <div class="collapse text-secondary fs-6" id="intro">
+                <a id="more" href="#">...more</a>
+                <div class=" text-secondary fs-6" id="intro">
                     <div>-🌏Currently base in Taoyuan.Originally from Taiwan.</div>
                     <div>-💻Taking a Web class in WAD training center.</div>
                     <div>-🎨Previously, Worked as an interior designer .</div>
@@ -82,7 +82,7 @@
         <img src="./img/FB576AD7-13D7-402D-AB8E-FDB58F230602.png" alt="JingHan" width="100%"
             class=" mt-sm-3  img-fluid  col-12 col-sm-5">
         <div class="col-12 text-center fs-1 text-secondary godown">
-            <a class="fa-solid fa-chevron-down" href="#project"></a>
+            <a class="fa-solid fa-chevron-down" href="#project" style="text-decoration: none;"></a>
         </div>
     </div>
 
@@ -95,24 +95,25 @@
     <div class="container">
         <ul class="nav nav-tabs nav-justified pt-sm-5" style="border-bottom: 1px solid black;">
             <li class="nav-item">
-                <a class="nav-link fs-4" href="./project/web.html" target="mymain" onclick="switchCategory(3)"
+                <a class="nav-link fs-4 portfoilo" data-url="./project/web.html" onclick="switchCategory(3)"
                     id="active">Web</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fs-4" href="./project/interior.html" target="mymain"
+                <a class="nav-link fs-4 portfoilo" data-url="./project/interior.html"
                     onclick="switchCategory(4)">Interior</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fs-4" href="./project/graphic.html" target="mymain"
+                <a class="nav-link fs-4 portfoilo" data-url="./project/graphic.html"
                     onclick="switchCategory(5)">Graphic</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fs-4" href="./project/other.html" target="mymain"
+                <a class="nav-link fs-4 portfoilo" data-url="./project/other.html"
                     onclick="switchCategory(6)">Other</a>
             </li>
         </ul>
-        <iframe src="./project/web.html" frameborder="0" name="mymain" width="100%" scrolling="no"
-            onload="resizeIframe(this)"></iframe>
+        <!-- <iframe src="./project/web.html" frameborder="0" name="mymain" width="100%" scrolling="no"
+            onload="resizeIframe(this)"></iframe> -->
+            <div id="frame"></div>
     </div>
     <div id="" style="height: 2rem;"></div>
     <div class="mx-auto text-center title">BULIDING...</div>
@@ -130,7 +131,7 @@
 
     <!-- ===== JS ===== -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 
