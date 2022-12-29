@@ -1,3 +1,8 @@
+$chk=document.cookie;
+if($chk!='login=1'){
+  window.location.href = "./index.html"
+}
+
 
 function switchCategory(mykey) {
     let text = document.getElementsByClassName('nav-link');

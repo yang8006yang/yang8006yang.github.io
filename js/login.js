@@ -6,6 +6,7 @@ function chk() {
     if(acc == myacc && pw == mypw){
         window.setTimeout("window.location.href = './main.html'",2000);
         const fg = document.querySelector('.fg');
+        document.cookie = 'login=1 ; max-age=7200';
         fg.classList='fg close'
     }else{
         window.location.href = "./index.html"
