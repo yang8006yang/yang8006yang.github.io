@@ -70,10 +70,15 @@
   transition: 1s;
 }
 
+
 .imgblock:hover{
   transform: scale(1.1);
   transition: 1s;
   margin: 0rem 8rem;
+}
+
+.odd{
+  margin-top: 2rem;
 }
 
 .type1 {

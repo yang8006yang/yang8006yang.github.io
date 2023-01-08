@@ -23,7 +23,7 @@ function switchCategory(mykey) {
 $('#contact').click(function(){
   $( "#contactbar" ).slideToggle("slow");
 })
-// INTRO 開關
+// ==========INTRO 開關============
 // let more = document.getElementById('more');
 // more.addEventListener("click", function() {
 //     if(more.textContent=='...more'){
@@ -39,26 +39,42 @@ $('#contact').click(function(){
       $(this).text(text);
     })
 
-// 抓iframe 長度
-  // function resizeIframe(obj) {
+// ==========抓iframe 長度============
+// function resizeIframe(obj) {
   //   obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
   // }
-
-//   MOUSE位置
+  
+// ==========MOUSE位置============
 $(window).mousemove(function (e) {
     $("#mouse").css({ top: e.pageY, left: e.pageX }); 
   }); 
 
 
-// iframe
+// iframe(AJAX)
 $.get("./project/web.html", function(data) {
   $('#frame').html(data);
 });
 
 $('.portfoilo').click(function(){
   let url=$(this).data("url")
-  console.log(url);
   $.get(url, function(data) {
     $('#frame').html(data);
   });
+})
+
+// 抓取頁面滾動位置，()移動與停止
+    $(window).scroll(function(){
+      let screenHeight = $(window).height();
+      let scrollTop = $(window).scrollTop();
+      let scrollBox = $('.s-box').height();
+      let scrollB = $('.brackets').height();
+      let scrollEnd =(screenHeight*1)+(scrollBox*1)-(scrollB*1.3)
+      let brackets = $('.brackets');
+        if(scrollTop > screenHeight && scrollTop < scrollEnd){
+          brackets.css('top',(scrollTop*1)+(50*1)+'px');
+        }
+        if(scrollTop > scrollEnd-(screenHeight*0.7)){
+          $('.mypic1').css('animationName','pic1');
+          $('.mypic2').css('animationName','pic2');
+        }
 })
