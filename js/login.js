@@ -3,6 +3,7 @@ function chk() {
     const pw = document.getElementById('pw').value
     let myacc="JingHan Yang";
     let mypw="HappyLife";
+    // You find the treasure!!
     if(acc == myacc && pw == mypw){
         window.setTimeout("window.location.href = './main.html'",2000);
         const fg = document.querySelector('.fg');

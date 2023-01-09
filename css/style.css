@@ -5,8 +5,8 @@
 }
 
 @media only screen and (max-width: 576px) {
-  .fs-5 {
-    font-size: 0.6rem;
+  html {
+    font-size: 12px;
   }
 }
 
@@ -56,7 +56,7 @@ html{
   font-size: 15rem;
   transform: scaleY(1.8);
   /* transform: scaleX(1); */
-  font-family: Impact, Haettenschweiler, sans-serif;
+  font-family: Impact, 'Secular One', sans-serif;
   text-align: center;
   margin-top: 13rem;
   position: relative;
@@ -119,6 +119,9 @@ right: 100px;
   .brackets{
     display: none;
   }
+  #pic-box{
+    height: 30vh;
+  }
 }
 
 .tool a img{
@@ -173,7 +176,7 @@ a:hover {
 
 /* NAV */
 .name {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, 'Secular One', 'Arial Narrow Bold', sans-serif;
   font-size: 8rem;
 }
 
@@ -183,26 +186,26 @@ a:hover {
 
 @media only screen and (max-width: 1200px) {
   .name {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, 'Secular One', 'Arial Narrow Bold', sans-serif;
     font-size: 6rem;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .name {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, 'Secular One', 'Arial Narrow Bold', sans-serif;
     font-size: 3rem;
   }
 
   .logo {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, 'Secular One', 'Arial Narrow Bold', sans-serif;
     border: 0px;
   }
 }
 
 .nav-tabs a,
 b {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, 'Secular One', 'Arial Narrow Bold', sans-serif;
 }
 
 /* 打字動畫 */
@@ -296,7 +299,7 @@ b {
   align-items: center;
   font-size: clamp(5rem, 5vh, 5rem);
   flex: 1;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, 'Secular One', 'Arial Narrow Bold', sans-serif;
   font-weight: 1000;
 }
 
