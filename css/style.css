@@ -23,6 +23,10 @@ html{
 
 
 /* MOUSE */
+#contact:hover{
+  cursor: pointer;
+}
+
 @keyframes circleRo {
   0% {
     transform: rotate(0);
