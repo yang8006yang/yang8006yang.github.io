@@ -18,9 +18,10 @@ if ("geolocation" in navigator) {
 function TimeRefresh() {
     let date = new Date();
     let YMD = date.toISOString().split('T')
+    let SecondsWithZero = date.getSeconds().toString().padStart(2, '0');
     let minutesWithZero = date.getMinutes().toString().padStart(2, '0');
     let hoursWithZero = date.getHours().toString().padStart(2, '0');
-    let currentTime = `${YMD[0]} ${hoursWithZero}:${minutesWithZero}`
+    let currentTime = `${YMD[0]} ${hoursWithZero}:${minutesWithZero}:${SecondsWithZero}`
     $('#time').text(currentTime)
 }
 
@@ -32,12 +33,13 @@ function getCityFromCoordinates(lat, lng, callback) {
     });
 }
 //ajax天氣data 用縣市取得天氣資訊
+let wtext=''
 function getCityWeather(index) {
     $.get("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-13962AF3-317F-4A42-B4D2-2A47B7A420B8", function (data) {
         let parameter = data['records']['location'][index]['weatherElement'][0]['time'][0]['parameter'];
         // console.log(parameter['parameterName']);
         // console.log(parameter['parameterValue']);
-        let wtext = `${parameter['parameterName']} . ${parameter['parameterValue']}℃`
+        wtext = `${parameter['parameterName']} . ${parameter['parameterValue']}℃`
         $('#weather').text(wtext);
     });
 }
@@ -51,12 +53,14 @@ $(document).ready(function () {
         let ctext = `|${city}`
         $('#city').text(ctext);
         cityCode.forEach((e, index) => {
-            if (e == city) {
+            if (e == city && "geolocation" in navigator) {
                 getCityWeather(index);
             }
         });
     });
 
-
+    if($('#city').text() == '' && wtext != ''){
+        location.reload();
+    }
 
 });
