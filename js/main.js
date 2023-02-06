@@ -62,18 +62,29 @@ $(window).scroll(function () {
   let scrollB = $('.brackets').height();
   let scrollEnd = (screenHeight * 1) + (scrollBox * 1) - (scrollB * 1.3)
   let brackets = $('.brackets');
+
   if (scrollTop > screenHeight && scrollTop < scrollEnd) {
-    brackets.css('top', (scrollTop * 1) + (50 * 1) + 'px');
+    brackets.css('top', (scrollTop * 1.1) + (50 * 1) + 'px');
   }
+
   if (scrollTop > scrollEnd - (screenHeight * 0.7)) {
     $('.mypic1').css('animationName', 'pic1');
     $('.mypic2').css('animationName', 'pic2');
   }
+
   if ($('#more').text() == '...close' && scrollTop > screenHeight * 0.8) {
 
     $("#intro").slideToggle("slow");
     let text = ($('#more').text == '...more') ? '...close' : '...more';
     $('#more').text(text);
+  }
+
+  if(scrollTop > screenHeight*0.5){
+    $('.go').text('TOP');
+    $('.go').attr('href','#');
+  }else{
+    $('.go').text('END');
+    $('.go').attr('href','#end');    
   }
 })
 
