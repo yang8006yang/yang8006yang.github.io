@@ -48,19 +48,17 @@ $(document).ready(function () {
 
     TimeRefresh();
     setInterval(TimeRefresh, 1000)
-
-    getCityFromCoordinates(lat, lng, function (city) {
-        let ctext = `|${city}`
-        $('#city').text(ctext);
-        cityCode.forEach((e, index) => {
-            if (e == city && "geolocation" in navigator) {
-                getCityWeather(index);
-            }
+     console.log(lat);
+    if(lat!=''){
+        getCityFromCoordinates(lat, lng, function (city) {
+            let ctext = `|${city}`
+            $('#city').text(ctext);
+            cityCode.forEach((e, index) => {
+                if (e == city && "geolocation" in navigator) {
+                    getCityWeather(index);
+                }
+            });
         });
-    });
-
-    if($('#city').text() == '' && wtext != ''){
-        location.reload();
     }
 
 });

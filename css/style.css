@@ -65,6 +65,7 @@ html{
   margin-top: 13rem;
   position: relative;
   /* top: 100px; */
+  transition: 1ms;
 }
 
 .b-left{
