@@ -36,6 +36,7 @@ function getCityWeather(index) {
         // console.log(parameter['parameterValue']);
         wtext = `${parameter['parameterName']} . ${parameter['parameterValue']}℃`
         $('#weather').text(wtext);
+        console.log(wtext);
     });
 }
 
