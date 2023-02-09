@@ -474,9 +474,9 @@ hr {
   position: relative;
 }
 .go a{
-  color: rgb(224, 224, 224);
   transition: 1s;
 } 
+
 .go:active{
   transform: scale(0.9);
   box-shadow: 5px 5px 8px 1px rgba(0, 0, 0, 0.3);

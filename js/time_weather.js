@@ -16,12 +16,7 @@ if ("geolocation" in navigator) {
 
 // 取得現在時間
 function TimeRefresh() {
-    let date = new Date();
-    let YMD = date.toISOString().split('T')
-    let SecondsWithZero = date.getSeconds().toString().padStart(2, '0');
-    let minutesWithZero = date.getMinutes().toString().padStart(2, '0');
-    let hoursWithZero = date.getHours().toString().padStart(2, '0');
-    let currentTime = `${YMD[0]} ${hoursWithZero}:${minutesWithZero}:${SecondsWithZero}`
+    let currentTime = new Date().toLocaleString()
     $('#time').text(currentTime)
 }
 
