@@ -23,7 +23,7 @@ function TimeRefresh() {
 //透過OSM 用經緯度取得地址
 function getCityFromCoordinates(lat, lng, callback) {
     $.getJSON(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`, function (data) {
-        const city = data.address.town || data.address.city;
+        const city = [data.address.city, data.address.town];
         callback(city || 'Could not find city');
     });
 }
@@ -47,10 +47,10 @@ $(document).ready(function () {
      console.log(lat);
     if(lat!=''){
         getCityFromCoordinates(lat, lng, function (city) {
-            let ctext = `|${city}`
+            let ctext = `|${city[1]}`
             $('#city').text(ctext);
             cityCode.forEach((e, index) => {
-                if (e == city && "geolocation" in navigator) {
+                if (e == city[0] && "geolocation" in navigator) {
                     getCityWeather(index);
                 }
             });
